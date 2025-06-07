@@ -5,5 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Docker image
-        run: docker build -t golden-image .
+       - name: Build Docker image
+        run: |
+          docker build -t golden-image .
+          docker images golden-image
