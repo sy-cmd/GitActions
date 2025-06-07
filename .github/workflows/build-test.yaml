@@ -6,5 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Docker image
-        # 'docker build .' assumes the Dockerfile is in the current directory (which is repo root after checkout)
         run: docker build -t golden-image .
