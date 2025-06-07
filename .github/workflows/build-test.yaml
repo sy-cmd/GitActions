@@ -1,0 +1,10 @@
+name: Build Only
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          git clone http://192.168.50.20:3000/Hamilton/golden-image/src/branch/SAAS-28 .
+          docker build -t golden-image .
